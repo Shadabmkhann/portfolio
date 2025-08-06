@@ -1,5 +1,6 @@
 import React from 'react'
 import { projects } from '../../constants'
+import Screenshot from '../../assets/tech_logo/Screenshot 2025-07-17 041429.png'
 
 const Work = () => {
   return (
@@ -16,14 +17,14 @@ const Work = () => {
   <p className='text-gray-400 mt-4 text-lg font-semibold'>A showcase of the projects I have worked on, highlighting my skills and experience in various technologies</p>
 </div>
 {/* Project Grid */}
-<div className='grid gap-12 grid-cols-1 md:grid-cols lg:grid-cols-3'>
+<div className='grid gap-12 grid-cols-1 md:grid-cols lg:grid-cols-3 justify-center '>
   {projects.map((projects) => (
     <div
     key={projects.id}
     className='border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300'
     >
       <div>
-        <img src={projects.image} alt= {projects.title} className='w-full h-48 object-cover rounded-xl' />
+        <img src={Screenshot} alt= {projects.title} className='w-full h-full object-cover rounded-xl'/>
       </div>
     </div>
   ))}
